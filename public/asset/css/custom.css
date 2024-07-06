@@ -1,0 +1,385 @@
+.invalid-feedback {
+    color: red;
+    font-size: 0.875em;
+    margin-top: 0.25em;
+}
+
+.is-invalid {
+    border-color: red;
+}
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* Elemanların satır satır yerleşmesini sağla */
+    align-items: center;
+    gap: 1rem;
+    /* Elemanlar arasına boşluk ekle */
+}
+
+/* Elemanların genişlik ayarları */
+.flex-grow-1 {
+    flex: 1;
+    min-width: 150px;
+    /* Minimum genişlik ayarı */
+    max-width: 200px;
+    /* Maksimum genişlik ayarı */
+}
+
+/* Buton hizalaması */
+.flex-grow-0 {
+    flex: 0 0 auto;
+    margin-bottom: 10px;
+}
+
+.main-search-button {
+    width: 60px !important;
+    /* Butonun genişliğini ayarlayın */
+    height: 60px !important;
+    /* Butonun yüksekliğini ayarlayın */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #ff5a5f !important;
+    /* Buton rengi */
+    border: none !important;
+    border-radius: 12px !important;
+    /* Köşeleri yuvarlak */
+    color: #fff !important;
+    /* Simge rengi */
+    font-size: 12px !important;
+    /* Simge boyutu */
+    cursor: pointer !important;
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+.main-search-button .flaticon-search {
+    font-size: 15px !important;
+}
+
+/* Tarih ve saat inputları için stil düzenlemeleri */
+.date-container,
+.time-container {
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    position: relative;
+}
+
+.date-input,
+.time-input {
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    height: 55px;
+    /* Select alanlarıyla aynı yükseklikte */
+    background-color: #F7F7F7 !important;
+    /* Arka plan rengi */
+    border: 1px solid #DDDDDD;
+    /* Border */
+    border-radius: 12px;
+    /* Border radius */
+    font-size: 1rem;
+    /* Yazı boyutu */
+    color: var(--headings-color);
+    /* Yazı rengi */
+    line-height: 40px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    /* Alt boşluk ekle */
+}
+
+.date-input:focus,
+.time-input:focus {
+    border: 1px solid #DDDDDD;
+    /* Select alanlarıyla uyumlu border */
+    outline: none;
+    background-color: #F7F7F7 !important;
+    /* Arka plan rengi */
+    height: 55px;
+    /* Select alanlarıyla aynı yükseklikte */
+}
+
+.selectpicker {
+    width: calc(100% - 20px) !important;
+    height: 55px !important;
+    padding: 0.5rem 1rem !important;
+    background-color: #F7F7F7 !important;
+    border: 1px solid #DDDDDD !important;
+    border-radius: 12px !important;
+    font-size: 1rem !important;
+    color: var(--headings-color) !important;
+    margin-bottom: 10px !important;
+}
+
+.flatpickr-input {
+    border: none !important;
+    outline: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0.5rem !important;
+    font-size: 1rem !important;
+    box-sizing: border-box;
+    background-color: #F7F7F7 !important;
+    border-radius: 12px !important;
+    color: var(--headings-color) !important;
+}
+
+.input-label {
+    position: absolute;
+    left: 15px;
+    top: -10px;
+    color: #888;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+@media (min-width: 769px) {
+    .time-input {
+        width: 150px;
+        max-width: 150px;
+        flex: 0 0 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .flex-grow-1,
+    .date-container,
+    .time-container,
+    .col-md-5,
+    .col-lg-5 {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .input-label {
+        left: 15px;
+        top: -10px;
+        font-size: 12px;
+    }
+
+    .date-input,
+    .time-input,
+    .selectpicker {
+        padding: 0.5rem 1rem;
+        height: 45px;
+        /* Mobilde yükseklik biraz daha düşük olabilir */
+        margin-bottom: 10px;
+        /* Alt boşluk ekle */
+    }
+
+    .hero-title,
+    .hero-text {
+        text-align: center;
+        /* Başlıkları ortala */
+        margin-bottom: 20px;
+        /* Başlıklar ve form arasına boşluk ekle */
+    }
+
+    .advance-search-tab {
+        margin-top: 20px;
+        /* Formun üstüne boşluk ekle */
+    }
+
+    .bootselect-multiselect {
+        position: relative;
+        width: 100%;
+        margin-bottom: 10px;
+        /* Alt boşluk ekle */
+    }
+
+    .bootselect-multiselect select {
+        width: 100%;
+        height: 45px;
+        padding: 0.5rem 1rem;
+        box-sizing: border-box;
+        border: 1px solid #DDDDDD;
+        border-radius: 12px;
+        background-color: #F7F7F7;
+        font-size: 1rem;
+        color: var(--headings-color);
+    }
+}
+
+/* Alış ve Teslim Yeri select yapısına uyumlu hale getirmek */
+.bgc-f7 {
+    background-color: #F7F7F7 !important;
+}
+
+.form-control {
+    border: 1px solid #DDDDDD;
+    /* Border çizgisi belirgin hale getirildi */
+    border-radius: 12px !important;
+    height: 55px !important;
+    line-height: 40px;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    overflow: hidden;
+    background-color: #F7F7F7 !important;
+    /* Arka plan rengi */
+    margin-bottom: 10px;
+    /* Alt boşluk ekle */
+}
+
+.form-control:focus {
+    border: 1px solid #DDDDDD;
+    /* Select alanlarıyla uyumlu border */
+    outline: none !important;
+    background-color: #F7F7F7 !important;
+    /* Arka plan rengi */
+    height: 55px !important;
+    /* Select alanlarıyla aynı yükseklikte */
+}
+
+/* Quantity Buttons */
+
+.quantity {
+    display: flex;
+    border: 1px solid #EE4C31;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.quantity button {
+    background-color: #eb6753;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30px;
+    height: auto;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.quantity button:hover {
+    background-color: #EE4C34;
+}
+
+.input-box {
+    width: 40px;
+    text-align: center;
+    border: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Hide the number input spin buttons */
+.input-box::-webkit-inner-spin-button,
+.input-box::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-box[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.car-fade-out {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.car-fade-in {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+
+/* Progress Bar */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    background: #f5f7f7;
+    color: #393939;
+}
+
+.rent-bar-wrapper {
+    width: 80%;
+    background: #ffffff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rent-bar {
+    overflow: hidden;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.rent-bar li {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.rent-bar li .title {
+    font-size: 17px;
+    line-height: 24px;
+    color: #d5dbdb;
+}
+
+.rent-bar li::before {
+    content: "✅︎";
+    display: block;
+    font-size: 18px;
+    line-height: 40px;
+    color: #d5dbdb;
+    background: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    border: 2px solid #d5dbdb;
+}
+
+.rent-bar li::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #d5dbdb;
+    position: absolute;
+    top: 20px;
+    left: calc(-50% + 20px);
+    z-index: -1;
+}
+
+.rent-bar li:first-child::after {
+    content: none;
+}
+
+.rent-bar li.active .title {
+    color: #EB6753;
+}
+
+.rent-bar li.active::before {
+    border-color: #EB6753;
+    background-color: #EB6753;
+    color: white;
+}
+
+.rent-bar li.active + li::after {
+    background-color: #EB6753;
+}
+
+/* Add a shadow to the progress bar container */
+.ps-widget {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
